@@ -20,8 +20,6 @@ public class SUDOKU_GENERATOR {
                 board[r + i][c + j] = num;
             }
         }
-
-
     }
 
     public void fillDiagonal() {
@@ -29,13 +27,13 @@ public class SUDOKU_GENERATOR {
             fillBox(i, i);
         }
     }
-
+    //fills the rest of the box using the sudoku_algorithm class
     public void fill() {
         SUDOKU_ALGORITHM sudoku = new SUDOKU_ALGORITHM(board);
         sudoku.solve();
         board = sudoku.getBoard();
     }
-
+    //Removes k number of boxes to create the game
     public void remove() {
         while (k != 0) {
             int row = (int) (Math.random() * 9);
@@ -45,15 +43,10 @@ public class SUDOKU_GENERATOR {
             k--;
         }
     }
-
-    public void fillValues() {
-        // Fill the diagonal of SRN x SRN matrices
+    
+    public void fillValues()   
         fillDiagonal();
-
-        // Fill remaining blocks
         fill();
-
-        // Remove Randomly K digits to make game
         remove();
     }
 
