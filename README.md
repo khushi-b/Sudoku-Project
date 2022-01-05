@@ -1,2 +1,2 @@
 # Sudoku-Project
-this project was designed to generate new sudoku games and solve user inputted games
+This project was designed to generate new sudoku games and solve user inputted games. Using a simple backtracking algorithm, the user can simply enter any unsolved sudoku board of there choice, and the alogrithm will solve and return a solved board. Using Java Swing, there is a home page, a difficulty page, and the game page. This makes it very easy for a user to navigate and play the game.
